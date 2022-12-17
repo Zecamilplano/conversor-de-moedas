@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CodeClub Convert Money</title>
+</head>
+
+<body>
+     <div class="container">
+        <header>
+            <h1>CodeClub Convert Money</h1>
+        </header>
+            
+        <main>
+            <label>
+                Converter <b>de</b>
+                <select>
+                    <option> R$ Real Brasileiro </option>
+                </select>
+            </label>
+
+            <label>
+                Converter <b> para</b></label>
+                <select id="currency-select">
+                    <option> US$ Dolár Americano</option>
+                    <option>€ Euro</option>
+                    <option>Bitcoin</option>
+                </select>
+            </label>
+            <label>
+                Valor
+                <input id="input-real" placeholder="R$ 10.000,00">
+            </label>
+
+            <button type="button" id="convert-button">Converter</button>
+            <section>
+                <div class="container-currency">
+                    <img src="./assets/brasil.png" alt="Bandeira-Brasil">
+                    <p class="currency currency-name">Real</p>
+                    <p class="currency currency-value" id="real-value-text">R$ 10.000,00</p>
+                </div>
+
+                <img src="./assets/seta.png" alt="seta-para-baixo" class="arrow-img">
+
+                <div class="container-currency">
+                    <img src="./assets/estados-unidos.png" alt="bandeira-pais-conversão" id="currency-img">
+                    <p class="currency currency-name" id="currency-name">Dólar Americano</p>
+                    <p class="currency currency-value" id="currency-value-text">US$ 2.000,00</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Projeto feito por Ezequiel </p>
+            <p>By <span>DevClub</span></p>
+         </footer>
+     </div>
+     
+</body>
+<script src="script.js"></script>
+
+</html>
