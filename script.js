@@ -26,17 +26,17 @@ const convertValues = async () => {
         currencyValueText.innerText = new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD",
-        }).format(inputReais * dolar)
+        }).format(inputReais / dolar)
     }
 
     if(select.value === "€ Euro"){
         currencyValueText.innerText = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "EUR",
-        }).format(inputReais * euro)
+        }).format(inputReais / euro)
     }
     if (select.value === "Bitcoin"){
-        currencyValueText.innerText= (inputReais / bitcoin).toFixed(3)
+        currencyValueText.innerText= (inputReais / bitcoin).toFixed(5)
 
     }
 }
@@ -58,6 +58,10 @@ changeCurrency = () => {
         currencyImg.src = "./assets/euro.png"
     }
 
+    if (select.value === 'Bitcoin') {
+        currencyName.innerHTML = "Bitcoin"
+        currencyImg.src = "./assets/bitcoin.png"
+    }
     convertValues()
     
     
